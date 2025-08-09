@@ -7,8 +7,10 @@ MOV DPTR, #3000H ; Storing the initial address of 3000H of the external memory i
 MOVX A, @DPTR ; Moving the data in the 3000H memory location to accumulator.
 MOV R0, A ; Moving the data in the accumulator to R0.
 INC DPTR ; Increamenting the DPTR address from 3000H to 3001H.
+
 MOVX A, @DPTR ; Moving the data in the 3001H memory location to accumulator.
 ADD A, R0 ; Adding both the data.
 INC DPTR ; Increamenting the DPTR address from 3001H to 3002H.
+
 MOVX @DPTR, A ; Moving the result in the accumulator to 3002H memory location.
 END
